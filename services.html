@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <div id="headerId"></div>
+
+
+    <section class="container mt-5" id="accordion">
+      <h2 class="title text-center mb-3">Our Services</h2>
+      <div class="content-container container-fluid mb-5" id="inner-accordion"></div>
+    </section>
+
+    <section class="container mt-5" id="list"></section>
+
+    <section id="footerId"></section>
+
+
+    <script type="module">
+      import Header from '/assets/components/Header.js';
+    
+      const container = document.getElementById('headerId');
+    
+      container.innerHTML = Header();
+      
+    </script>
+    <script type="module">
+      import Footer from '/assets/components/Footer.js';
+    
+      const container = document.getElementById('footerId');
+    
+      container.innerHTML = Footer();
+      
+    </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const accordionContainer = document.getElementById('inner-accordion');
+
+    accordionContainer.addEventListener('click', function (event) {
+      const department = event.target.closest('.department');
+
+      if (department) {
+        console.log('Clicked on department:', department.textContent);
+
+        const individual = department.closest('.individual');
+        individual.classList.toggle('active');
+      }
+    });
+  });
+</script>   
+    
+    <script type="module">
+      import Accordion from '/assets/components/Accordion.js'
+      import fetchData from '/assets/js/helpers.js'
+
+      const innerAcordion = document.querySelector('#inner-accordion')
+      const loadMoreBtn = document.getElementById('loadMoreBtn');
+      let displayedServices = 5;
+
+      awaitFetchData('/apis/services.json');
+
+      async function awaitFetchData(apiURL){
+        try{
+         const data = await fetchData(apiURL);
+
+         console.log("Services DATA: ", data)
+
+         const departments = {}
+
+         data.forEach(service=> {
+          const department = service.service_department;
+          if(!departments[department]){
+            departments[department] = [];
+          }
+          departments[department].push(service);
+         })
+
+         for(const department in departments){
+          const services = departments[department].slice(0,5);
+          const accordionHtml = Accordion(department, services);
+          innerAcordion.innerHTML += accordionHtml;
+         }
+
+        }catch(error){
+          console.error("Couldnt retrieve data", error)
+        }
+      }
+
+
+    </script>
+
+    <script type="module" >
+      import Department from '/assets/components/Department.js'
+      import fetchData from '/assets/js/helpers.js'
+
+      document.addEventListener('DOMContentLoaded', async() =>{
+        try {
+          const data = await fetchData('/apis/services.json');
+      
+          const uniqueDepartments = [...new Set(data.map(service => service.service_department))];
+
+          uniqueDepartments.forEach(departmentName => {
+            const department = Department(data, departmentName);
+            document.getElementById('list').innerHTML += department;
+          });
+
+        }catch(error){
+            console.error(error.message)
+        }
+          })
+    </script>
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>   
+</body>
+</html>

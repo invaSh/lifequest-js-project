@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        input{
+         height: 60px !important;   
+        }
+        form .form-group{
+            margin: 20px 0 !important ;
+        }
+        button{
+            background: linear-gradient(to right, #6555C4, #21c5af);
+            color: #fff !important;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="headerId"></div>
+
+   <div class="container mt-5">
+        <h2 class="mb-4 text-center">Hospital Appointment Form</h2>
+        <form id="form"> 
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="patientName">Patient Name</label>
+                    <input type="text" class="form-control" id="patientName" placeholder="Enter your name">
+                    <div class="alertContainer" id="patientNameAlertContainer"></div>
+                </div>
+                <div class="form-group">
+                    <label for="contactNumber">Contact Number</label>
+                    <input type="tel" class="form-control" id="contactNumber" placeholder="Enter your phone number">
+                    <div class="alertContainer" id="contactNumberAlertContainer"></div>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input class="form-control" id="email" placeholder="Enter your email">
+                    <div class="alertContainer" id="emailAlertContainer"></div>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" class="form-control" id="dob">
+                    <div class="alertContainer" id="dobAlertContainer"></div>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="appointmentDate">Preferred Appointment Date</label>
+                    <input type="date" class="form-control" id="appointmentDate">
+                    <div class="alertContainer" id="appointmentDateAlertContainer"></div>
+                </div>
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <select id="department" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>Cardiology</option>
+                        <option>Orthopedics</option>
+                        <option>Neurology</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                    <div class="alertContainer" id="departmentAlertContainer"></div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="symptoms">Symptoms</label>
+                <textarea class="form-control" id="symptoms" rows="3" placeholder="Describe your symptoms"></textarea>
+                <div class="alertContainer" id="symptomsAlertContainer"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="additionalInfo">Additional Information</label>
+                <textarea class="form-control" id="additionalInfo" rows="3" placeholder="Any additional information"></textarea>
+            </div>
+
+            <button type="submit" class="btn">Submit</button>
+            
+        </form>
+    </div>
+
+
+
+
+    <section id="footerId"></section>
+
+    <script type="module">
+        import Header from '/assets/components/Header.js';
+        
+        const headerContainer = document.getElementById('headerId');
+        headerContainer.innerHTML = Header();
+    </script>
+    
+    <script type="module">
+        import Footer from '/assets/components/Footer.js';
+        
+        const footerContainer = document.getElementById('footerId');
+        footerContainer.innerHTML = Footer();
+    </script>
+
+<script type="module">
+
+    const form = document.getElementById('form');
+    const patientName = document.getElementById('patientName');
+    const contact = document.getElementById('contactNumber');
+    const email = document.getElementById('email');
+    const dob = document.getElementById('dob');
+    const appointmentDate = document.getElementById('appointmentDate');
+    const symptoms = document.getElementById('symptoms');
+    const department = document.getElementById('department');
+
+    function AlertComp(input) {
+    const alertElement = document.createElement('div');
+    alertElement.className = 'alert alert-danger d-flex align-items-center my-3';
+    alertElement.role = 'alert';
+    alertElement.innerHTML = `
+        
+        <div>
+            ${input}
+        </div>
+    `;
+    return alertElement;
+}
+
+form.addEventListener('submit', event => {
+    event.preventDefault();
+    validateInputs();
+});
+
+const validateInputs = () => {
+    clearAlerts();
+
+    if (patientName.value.trim() === '') {
+        displayAlert(patientName, 'Patient Name cannot be empty!');
+    }
+    
+    if (contact.value.trim() === '') {
+        displayAlert(contact, 'Contact Number cannot be empty!');
+    }else if(isNaN(contact.value.trim())){
+        displayAlert(contact, 'Contact Number is not valid');
+    }
+    
+    if (dob.value.trim() === '') {
+        displayAlert(dob, 'date of birth cannot be empty');
+    }else if(!(validateDateRange(dob.value.trim()))){
+        displayAlert(dob, 'date of birth is not valid');
+    }
+
+    if (appointmentDate.value.trim() === '') {
+        displayAlert(appointmentDate, 'appointment date cannot be empty');
+    }
+    else if(!(validateDateRange(appointmentDate.value.trim()))){
+        displayAlert(appointmentDate, 'appointment date is not valid');
+    }
+
+    if (symptoms.value.trim() === '') {
+        displayAlert(symptoms, 'symptoms cannot be empty');
+    }
+
+    if (email.value.trim() === '' ) {
+        displayAlert(email, 'email cannot be empty');
+    }else if(!(email.value.trim().includes("@"))){
+        displayAlert(email, 'Email is not valid');
+    }
+    
+    if (department.value.trim() === '') {
+        displayAlert(department, 'department cannot be empty');
+    }
+
+};
+
+const displayAlert = (inputElement, message) => {
+    const alertElement = createAlert(`<strong>${message}</strong>`);
+    const alertContainerId = inputElement.id + 'AlertContainer';
+    const alertContainer = document.getElementById(alertContainerId);
+    if (alertContainer) {
+        alertContainer.appendChild(alertElement);
+    } else {
+        console.error(`Alert container with id ${alertContainerId} not found`);
+    }
+};
+
+const createAlert = (message) => {
+    const alertElement = document.createElement('div')
+
+    const alertC = AlertComp(message);
+    alertElement.appendChild(alertC)
+    console.log('Created Alert Element:', alertElement.outerHTML); // Log the HTML content
+    return alertElement.firstChild;
+};
+
+const clearAlerts = () => {
+    const alertContainers = document.querySelectorAll('.alertContainer');
+
+    alertContainers.forEach(alertContainer => {
+        alertContainer.innerHTML = '';
+    });
+};
+
+function validateDateRange(inputDate) {
+  const minDate = new Date('2022-01-01'); 
+  const maxDate = new Date('2023-12-31');
+
+  const enteredDate = new Date(inputDate);
+  if (!isNaN(enteredDate) && enteredDate >= minDate && enteredDate <= maxDate) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
+</script>
+
+
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>   
+</body>
+</html>

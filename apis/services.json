@@ -1,0 +1,572 @@
+[
+    {
+        "service_name": "Cardiac Consultations",
+        "service_description": "Comprehensive evaluation by a cardiologist to assess cardiovascular health, review medical history, and discuss symptoms.",
+        "service_department": "Cardiology"
+    },
+    {
+        "service_name": "Electrocardiogram (ECG)",
+        "service_description": "Recording of the electrical activity of the heart over a period of time, aiding in the diagnosis of heart conditions.",
+        "service_department": "Cardiology"
+    },
+    {
+        "service_name": "Echocardiography",
+        "service_description": "Ultrasound imaging of the heart to assess its structure and function, helping in the diagnosis of heart diseases.",
+        "service_department": "Cardiology"
+    },
+    {
+        "service_name": "Cardiac Stress Testing",
+        "service_description": "Evaluation of the heart's response to stress, often involving physical exercise or medication, to detect abnormalities.",
+        "service_department": "Cardiology"
+    },
+    {
+        "service_name": "Cardiac Catheterization",
+        "service_description": "Invasive procedure to examine how well the heart is working, involving the insertion of a catheter into the heart chambers or vessels.",
+        "service_department": "Cardiology"
+    },
+    {
+        "service_name": "Cardiac Rehabilitation",
+        "service_description": "Structured exercise programs and lifestyle counseling for patients recovering from heart-related issues, aimed at improving cardiovascular health.",
+        "service_department": "Cardiology"
+    },
+    {
+        "service_name": "Arrhythmia Management",
+        "service_description": "Evaluation and treatment of abnormal heart rhythms (arrhythmias) through medication management, electrical cardioversion, or ablation procedures.",
+        "service_department": "Cardiology"
+    },
+    {
+        "service_name": "Heart Failure Clinic",
+        "service_description": "Specialized care for patients with heart failure, focusing on symptom management, medication optimization, and lifestyle modifications.",
+        "service_department": "Cardiology"
+    },
+    {
+        "service_name": "Peripheral Vascular Interventions",
+        "service_description": "Interventional procedures to address vascular issues outside the heart, such as angioplasty and stent placement for peripheral artery disease.",
+        "service_department": "Cardiology"
+    },
+    {
+        "service_name": "Advanced Cardiac Imaging",
+        "service_description": "Specialized imaging techniques, such as cardiac MRI and CT angiography, for detailed assessment of cardiac anatomy and function.",
+        "service_department": "Cardiology"
+    },
+    {
+        "service_name": "Heart Valve Clinic",
+        "service_description": "Dedicated clinic for the evaluation and management of heart valve disorders, including stenosis and regurgitation.",
+        "service_department": "Cardiology"
+    },
+    {
+        "service_name": "Hypertension Management",
+        "service_description": "Comprehensive care for patients with high blood pressure, including lifestyle modifications and medication management.",
+        "service_department": "Cardiology"
+    },
+    {
+        "service_name": "Inherited Cardiovascular Conditions Clinic",
+        "service_description": "Genetic counseling and cardiovascular risk assessment for individuals with a family history of inherited heart conditions.",
+        "service_department": "Cardiology"
+    },
+    {
+        "service_name": "Cardiac Rehabilitation",
+        "service_description": "Structured exercise programs and education to support the recovery and lifestyle changes for patients with heart disease.",
+        "service_department": "Cardiology"
+    },
+    {
+        "service_name": "Genetic Cardiology",
+        "service_description": "Evaluation of patients with a family history of cardiovascular diseases to assess genetic risk factors and provide personalized preventive strategies.",
+        "service_department": "Cardiology"
+    },
+    {
+        "service_name": "Emergency Medical Assessment",
+        "service_description": "Immediate medical evaluation and assessment of patients with acute illnesses, injuries, or life-threatening conditions.",
+        "service_department": "Emergency Room"
+    },{
+        "service_name": "Burn Care",
+        "service_description": "Emergency care and management of burn injuries, including assessment of burn severity and initial wound care.",
+        "service_department": "Emergency Room"
+    },
+    {
+        "service_name": "Abdominal Pain Clinic",
+        "service_description": "Specialized evaluation and management of patients presenting with acute or chronic abdominal pain in the emergency setting.",
+        "service_department": "Emergency Room"
+    },
+    {
+        "service_name": "Sepsis Rapid Response Team",
+        "service_description": "Dedicated team for the early identification and rapid intervention in cases of sepsis, a life-threatening infection.",
+        "service_department": "Emergency Room"
+    },
+    {
+        "service_name": "Emergency Psychiatry",
+        "service_description": "Immediate mental health assessment and crisis intervention for patients presenting with psychiatric emergencies.",
+        "service_department": "Emergency Room"
+    },
+    {
+        "service_name": "Point-of-Care Ultrasound",
+        "service_description": "Bedside ultrasound examinations to aid in the rapid diagnosis and assessment of various medical conditions in the emergency setting.",
+        "service_department": "Emergency Room"
+    },
+    {
+        "service_name": "Trauma Care",
+        "service_description": "Specialized care for patients with severe injuries or trauma, including rapid assessment, stabilization, and treatment.",
+        "service_department": "Emergency Room"
+    },
+    {
+        "service_name": "Critical Care",
+        "service_description": "Intensive care for patients with critical medical conditions, often involving continuous monitoring and life-support interventions.",
+        "service_department": "Emergency Room"
+    },
+    {
+        "service_name": "Diagnostic Imaging",
+        "service_description": "Immediate access to diagnostic imaging services, such as X-rays and CT scans, to aid in the rapid diagnosis of medical issues.",
+        "service_department": "Emergency Room"
+    },
+    {
+        "service_name": "Emergency Surgery",
+        "service_description": "Emergency surgical interventions for conditions that require immediate attention, such as appendicitis or severe trauma.",
+        "service_department": "Emergency Room"
+    },
+    {
+        "service_name": "Trauma Resuscitation",
+        "service_description": "Immediate and coordinated care for patients with severe trauma, involving resuscitation, stabilization, and rapid assessment.",
+        "service_department": "Emergency Room"
+    },
+    {
+        "service_name": "Toxicology Evaluation",
+        "service_description": "Assessment and management of patients exposed to toxic substances, providing timely interventions to minimize harm.",
+        "service_department": "Emergency Room"
+    },
+    {
+        "service_name": "Psychiatric Emergency Services",
+        "service_description": "Emergency care for patients experiencing acute psychiatric crises, including assessment, stabilization, and referral to appropriate mental health services.",
+        "service_department": "Emergency Room"
+    },
+    {
+        "service_name": "Critical Care Transport",
+        "service_description": "Emergency medical transport services for critically ill or injured patients, ensuring their safe transfer to higher levels of care.",
+        "service_department": "Emergency Room"
+    },
+    {
+        "service_name": "Emergency Dentistry",
+        "service_description": "Urgent dental care for patients with dental emergencies, including trauma, severe pain, and oral infections.",
+        "service_department": "Emergency Room"
+    },
+    {
+        "service_name": "Infectious Disease Management",
+        "service_description": "Consultation and management of complex infectious diseases, including bacterial, viral, and fungal infections.",
+        "service_department": "Internal Medicine"
+    },
+    {
+        "service_name": "Geriatric Assessment",
+        "service_description": "Comprehensive evaluation of older adults to address age-related health issues, functional decline, and optimize quality of life.",
+        "service_department": "Internal Medicine"
+    },
+    {
+        "service_name": "Travel Medicine",
+        "service_description": "Pre-travel consultations, vaccinations, and advice for individuals planning international travel to prevent travel-related illnesses.",
+        "service_department": "Internal Medicine"
+    },
+    {
+        "service_name": "Palliative Care",
+        "service_description": "Holistic care focused on relieving symptoms and providing support for patients with serious or life-limiting illnesses.",
+        "service_department": "Internal Medicine"
+    },
+    {
+        "service_name": "Sleep Medicine Consultation",
+        "service_description": "Evaluation and management of sleep disorders, including insomnia, sleep apnea, and restless legs syndrome.",
+        "service_department": "Internal Medicine"
+    },
+    {
+        "service_name": "Medical Weight Management",
+        "service_description": "Individualized weight loss programs and nutritional counseling for patients aiming to achieve and maintain a healthy weight.",
+        "service_department": "Internal Medicine"
+    },
+    {
+        "service_name": "Rheumatology Consultation",
+        "service_description": "Evaluation and management of autoimmune and rheumatic conditions, such as rheumatoid arthritis and systemic lupus erythematosus.",
+        "service_department": "Internal Medicine"
+    },
+    {
+        "service_name": "Metabolic Syndrome Clinic",
+        "service_description": "Comprehensive care for patients with metabolic syndrome, addressing risk factors for cardiovascular disease, diabetes, and obesity.",
+        "service_department": "Internal Medicine"
+    },
+    {
+        "service_name": "Gastroenterology Consultation",
+        "service_description": "Specialized care for gastrointestinal issues, including evaluation and management of conditions such as inflammatory bowel disease and liver diseases.",
+        "service_department": "Internal Medicine"
+    },
+    {
+        "service_name": "Endocrinology Consultation",
+        "service_description": "Evaluation and management of endocrine disorders, including diabetes, thyroid disorders, and hormonal imbalances.",
+        "service_department": "Internal Medicine"
+    },
+    {
+        "service_name": "Pediatric Well-Child Checkup",
+        "service_description": "Comprehensive health checkup for infants, children, and adolescents, focusing on growth, development, and preventive care.",
+        "service_department": "Pediatrics"
+    },
+    {
+        "service_name": "Immunizations and Vaccinations",
+        "service_description": "Administration of vaccines and immunizations to protect children from various infectious diseases and ensure their overall health.",
+        "service_department": "Pediatrics"
+    },
+    {
+        "service_name": "Pediatric Developmental Assessment",
+        "service_description": "Evaluation of a child's physical, cognitive, and social development to identify any developmental delays or concerns.",
+        "service_department": "Pediatrics"
+    },{
+        "service_name": "Neonatal Intensive Care Unit (NICU)",
+        "service_description": "Specialized care for critically ill newborns, including premature infants and those with complex medical conditions.",
+        "service_department": "Pediatrics"
+    },
+    {
+        "service_name": "Developmental-Behavioral Pediatrics",
+        "service_description": "Evaluation and management of developmental and behavioral issues in children, including autism spectrum disorders and ADHD.",
+        "service_department": "Pediatrics"
+    },
+    {
+        "service_name": "Pediatric Gastroenterology",
+        "service_description": "Specialized care for gastrointestinal issues in children, including inflammatory bowel disease, celiac disease, and liver disorders.",
+        "service_department": "Pediatrics"
+    },
+    {
+        "service_name": "Pediatric Nephrology",
+        "service_description": "Evaluation and management of kidney disorders in children, including congenital anomalies and pediatric kidney diseases.",
+        "service_department": "Pediatrics"
+    },
+    {
+        "service_name": "Pediatric Genetics Counseling",
+        "service_description": "Genetic counseling for families with children at risk for or diagnosed with genetic disorders or congenital conditions.",
+        "service_department": "Pediatrics"
+    },
+    {
+        "service_name": "Pediatric Urgent Care",
+        "service_description": "Prompt medical care for children with acute illnesses or injuries that require immediate attention but may not warrant a visit to the emergency room.",
+        "service_department": "Pediatrics"
+    },
+    {
+        "service_name": "Pediatric Asthma Clinic",
+        "service_description": "Specialized care for children with asthma, including diagnosis, management, and education for both patients and their families.",
+        "service_department": "Pediatrics"
+    },
+    {
+        "service_name": "Developmental Pediatrics",
+        "service_description": "Assessment and management of developmental delays and behavioral issues in children, providing tailored interventions and support.",
+        "service_department": "Pediatrics"
+    },
+    {
+        "service_name": "Allergy and Immunology for Children",
+        "service_description": "Specialized care for pediatric allergies and immune system disorders, including allergy testing, immunotherapy, and management plans.",
+        "service_department": "Pediatrics"
+    },
+    {
+        "service_name": "Pediatric Neurology Consultation",
+        "service_description": "Evaluation and management of neurological issues in children, including seizures, developmental disorders, and neurogenetic conditions.",
+        "service_department": "Pediatrics"
+    },
+    {
+        "service_name": "Adolescent Medicine",
+        "service_description": "Comprehensive care for adolescents, addressing physical, emotional, and behavioral health, as well as reproductive and preventive health needs.",
+        "service_department": "Pediatrics"
+    },
+    {
+        "service_name": "Pediatric Pulmonology",
+        "service_description": "Specialized care for respiratory issues in children, including asthma, cystic fibrosis, and other pulmonary disorders.",
+        "service_department": "Pediatrics"
+    },
+    {
+        "service_name": "Orthopedic Consultation",
+        "service_description": "Comprehensive consultation with an orthopedic specialist to assess and manage musculoskeletal conditions, injuries, and disorders.",
+        "service_department": "Orthopedics"
+    },
+    {
+        "service_name": "Joint Replacement Surgery",
+        "service_description": "Surgical intervention for the replacement of damaged or arthritic joints, such as knee, hip, or shoulder replacement.",
+        "service_department": "Orthopedics"
+    },
+    {
+        "service_name": "Sports Medicine",
+        "service_description": "Specialized care for athletes and physically active individuals, addressing sports-related injuries, rehabilitation, and performance optimization.",
+        "service_department": "Orthopedics"
+    },  {
+        "service_name": "Spine Surgery",
+        "service_description": "Surgical interventions for conditions affecting the spine, including herniated discs, spinal stenosis, and deformities.",
+        "service_department": "Orthopedics"
+    },
+    {
+        "service_name": "Orthopedic Hand Therapy",
+        "service_description": "Rehabilitation and therapy services specifically focused on hand and upper extremity conditions, injuries, and surgeries.",
+        "service_department": "Orthopedics"
+    },
+    {
+        "service_name": "Orthopedic Biomechanics Lab",
+        "service_description": "Specialized laboratory for the analysis of biomechanics related to orthopedic conditions, joint function, and movement patterns.",
+        "service_department": "Orthopedics"
+    },
+    {
+        "service_name": "Orthopedic Oncology Surgery",
+        "service_description": "Surgical management of bone and soft tissue tumors, working collaboratively with oncologists for comprehensive care.",
+        "service_department": "Orthopedics"
+    },
+    {
+        "service_name": "Pediatric Orthopedic Rehabilitation",
+        "service_description": "Rehabilitation programs tailored for children recovering from orthopedic surgeries or injuries, emphasizing age-appropriate care.",
+        "service_department": "Orthopedics"
+    },
+    {
+        "service_name": "Spinal Surgery",
+        "service_description": "Surgical procedures focused on the spine, including spinal fusion, discectomy, and other interventions to address spinal disorders.",
+        "service_department": "Orthopedics"
+    },
+    {
+        "service_name": "Orthopedic Rehabilitation",
+        "service_description": "Customized rehabilitation programs to help patients recover from orthopedic surgeries or injuries, aiming to restore mobility and function.",
+        "service_department": "Orthopedics"
+    },
+    {
+        "service_name": "Hand and Upper Extremity Surgery",
+        "service_description": "Specialized surgical care for conditions affecting the hand, wrist, and upper extremities, including fractures and nerve compressions.",
+        "service_department": "Orthopedics"
+    },
+    {
+        "service_name": "Orthopedic Oncology",
+        "service_description": "Multidisciplinary care for patients with bone and soft tissue tumors, involving surgical oncology, radiation therapy, and rehabilitation.",
+        "service_department": "Orthopedics"
+    },
+    {
+        "service_name": "Orthopedic Trauma Surgery",
+        "service_description": "Surgical intervention for complex fractures and musculoskeletal injuries, ensuring optimal recovery and function.",
+        "service_department": "Orthopedics"
+    },
+    {
+        "service_name": "Pediatric Orthopedics",
+        "service_description": "Specialized care for musculoskeletal issues in children, addressing developmental conditions, fractures, and congenital abnormalities.",
+        "service_department": "Orthopedics"
+    },
+    {
+        "service_name": "Foot and Ankle Surgery",
+        "service_description": "Surgical care for conditions affecting the foot and ankle, including deformities, injuries, and arthritis.",
+        "service_department": "Orthopedics"
+    },
+    {
+        "service_name": "Neurological Consultation",
+        "service_description": "Comprehensive consultation with a neurologist to evaluate and manage a wide range of neurological conditions, disorders, and symptoms.",
+        "service_department": "Neurology"
+    },
+    {
+        "service_name": "Electroencephalogram (EEG)",
+        "service_description": "Recording of the electrical activity of the brain to aid in the diagnosis and management of various neurological disorders, including seizures.",
+        "service_department": "Neurology"
+    },
+    {
+        "service_name": "Neuroimaging (MRI, CT)",
+        "service_description": "Advanced imaging techniques, such as MRI and CT scans, to visualize the structure and function of the brain and spinal cord for diagnostic purposes.",
+        "service_department": "Neurology"
+    }, {
+        "service_name": "Epilepsy Monitoring Unit",
+        "service_description": "Specialized unit for the continuous monitoring and diagnosis of epilepsy and seizure disorders, including video EEG monitoring.",
+        "service_department": "Neurology"
+    },
+    {
+        "service_name": "Neuroimmunology Clinic",
+        "service_description": "Evaluation and management of autoimmune and inflammatory disorders affecting the nervous system, such as multiple sclerosis.",
+        "service_department": "Neurology"
+    },
+    {
+        "service_name": "Headache and Migraine Clinic",
+        "service_description": "Specialized care for patients with chronic headaches and migraines, including personalized treatment plans and lifestyle management.",
+        "service_department": "Neurology"
+    },
+    {
+        "service_name": "Neurointensive Care Unit (NICU)",
+        "service_description": "Intensive care unit dedicated to the management of critically ill patients with neurological emergencies.",
+        "service_department": "Neurology"
+    },
+    {
+        "service_name": "Neurogenetic Counseling",
+        "service_description": "Genetic counseling for individuals and families with inherited neurological disorders or a family history of neurogenetic conditions.",
+        "service_department": "Neurology"
+    },
+    {
+        "service_name": "Stroke Clinic",
+        "service_description": "Specialized care for patients who have experienced a stroke, including rapid assessment, treatment, and prevention strategies.",
+        "service_department": "Neurology"
+    },
+    {
+        "service_name": "Movement Disorders Clinic",
+        "service_description": "Focused care for patients with movement disorders, such as Parkinson's disease, Huntington's disease, and essential tremor.",
+        "service_department": "Neurology"
+    },
+    {
+        "service_name": "Neuromuscular Disorders Clinic",
+        "service_description": "Specialized care for patients with neuromuscular disorders, including muscular dystrophy, myasthenia gravis, and peripheral neuropathies.",
+        "service_department": "Neurology"
+    },
+    {
+        "service_name": "Neuro-Oncology Consultation",
+        "service_description": "Multidisciplinary care for patients with brain and spinal cord tumors, involving neurologists, neurosurgeons, and oncologists.",
+        "service_department": "Neurology"
+    },
+    {
+        "service_name": "Sleep Disorders Clinic",
+        "service_description": "Evaluation and management of sleep-related issues, including insomnia, sleep apnea, and parasomnias.",
+        "service_department": "Neurology"
+    },
+    {
+        "service_name": "Neurogenetics Counseling",
+        "service_description": "Genetic counseling for patients with neurogenetic conditions, helping them understand risks, make informed decisions, and plan for the future.",
+        "service_department": "Neurology"
+    },
+    {
+        "service_name": "Neurorehabilitation",
+        "service_description": "Comprehensive rehabilitation programs for patients recovering from neurological injuries or surgeries, focusing on improving function and independence.",
+        "service_department": "Neurology"
+    },
+    {
+        "service_name": "Diagnostic Radiography",
+        "service_description": "Imaging studies, including X-rays, to diagnose and evaluate a wide range of medical conditions and injuries.",
+        "service_department": "Radiology"
+    },
+    {
+        "service_name": "Computed Tomography (CT) Scans",
+        "service_description": "Advanced imaging technique using X-rays to create detailed cross-sectional images of the body for diagnostic purposes.",
+        "service_department": "Radiology"
+    },
+    {
+        "service_name": "Magnetic Resonance Imaging (MRI)",
+        "service_description": "Non-invasive imaging technique that uses magnetic fields and radio waves to create detailed images of the internal structures of the body.",
+        "service_department": "Radiology"
+    },
+    {
+        "service_name": "Ultrasound Imaging",
+        "service_description": "Imaging technique that uses sound waves to create real-time images of internal structures, commonly used for obstetric and abdominal imaging.",
+        "service_department": "Radiology"
+    },
+    {
+        "service_name": "Interventional Radiology Procedures",
+        "service_description": "Minimally invasive procedures guided by imaging techniques to diagnose and treat various conditions, such as angiography and biopsies.",
+        "service_department": "Radiology"
+    },
+    {
+        "service_name": "Women's Imaging",
+        "service_description": "Imaging services specifically tailored for women, including mammography, breast ultrasound, and bone density scans.",
+        "service_department": "Radiology"
+    },
+    {
+        "service_name": "Musculoskeletal Imaging",
+        "service_description": "Diagnostic imaging of the musculoskeletal system, including joints, bones, and soft tissues, to assess injuries, arthritis, and other conditions.",
+        "service_department": "Radiology"
+    },
+    {
+        "service_name": "Body Imaging",
+        "service_description": "Imaging studies focused on the abdominal and pelvic organs for the diagnosis and management of various medical conditions.",
+        "service_department": "Radiology"
+    },
+    {
+        "service_name": "Breast Imaging Center",
+        "service_description": "Comprehensive breast imaging services, including mammography, breast ultrasound, and breast MRI for early cancer detection.",
+        "service_department": "Radiology"
+    },
+    {
+        "service_name": "Advanced Cardiovascular Imaging",
+        "service_description": "Advanced imaging modalities, such as cardiac CT and MRI, for detailed assessment of cardiovascular anatomy and function.",
+        "service_department": "Radiology"
+    },
+    {
+        "service_name": "Interventional Radiology Suite",
+        "service_description": "State-of-the-art suite for performing minimally invasive, image-guided procedures for diagnosis and treatment of various conditions.",
+        "service_department": "Radiology"
+    },
+    {
+        "service_name": "PET-CT Imaging",
+        "service_description": "Combined PET-CT scans for more accurate localization and assessment of various diseases, including cancer and neurological disorders.",
+        "service_department": "Radiology"
+    },
+    {
+        "service_name": "Musculoskeletal Ultrasound",
+        "service_description": "Ultrasound imaging focused on the musculoskeletal system for real-time visualization of joints, tendons, and soft tissues.",
+        "service_department": "Radiology"
+    },
+    {
+        "service_name": "Interventional Radiology",
+        "service_description": "Minimally invasive procedures guided by imaging techniques, including angiography, embolization, and image-guided biopsies.",
+        "service_department": "Radiology"
+    },
+    {
+        "service_name": "Neuroradiology",
+        "service_description": "Imaging of the brain, spinal cord, and peripheral nerves to aid in the diagnosis of neurological conditions, such as tumors and strokes.",
+        "service_department": "Radiology"
+    },
+    {
+        "service_name": "Preoperative Anesthetic Assessment",
+        "service_description": "Thorough assessment of patients before surgery to determine the appropriate anesthesia plan and address any potential risks or concerns.",
+        "service_department": "Anesthesiology"
+    },
+    {
+        "service_name": "General Anesthesia",
+        "service_description": "Administration of medications to induce a state of unconsciousness and painlessness during surgical procedures, ensuring patient comfort and safety.",
+        "service_department": "Anesthesiology"
+    },
+    {
+        "service_name": "Perioperative Pain Management",
+        "service_description": "Specialized pain management strategies implemented before, during, and after surgery to optimize patient comfort and recovery.",
+        "service_department": "Anesthesiology"
+    },
+    {
+        "service_name": "Neuraxial Anesthesia",
+        "service_description": "Anesthetic techniques involving the epidural or spinal space for pain relief during surgery, childbirth, or certain medical procedures.",
+        "service_department": "Anesthesiology"
+    },
+    {
+        "service_name": "Outpatient Anesthesia Services",
+        "service_description": "Anesthetic care for patients undergoing outpatient or same-day surgical procedures, ensuring safe and effective perioperative management.",
+        "service_department": "Anesthesiology"
+    },
+    {
+        "service_name": "Perioperative Cardiac Anesthesia",
+        "service_description": "Specialized anesthetic care for patients with cardiovascular issues undergoing surgical procedures, ensuring hemodynamic stability.",
+        "service_department": "Anesthesiology"
+    },
+    {
+        "service_name": "Anesthesia for Organ Transplantation",
+        "service_description": "Tailored anesthetic management for patients undergoing organ transplantation, addressing unique challenges associated with the procedure.",
+        "service_department": "Anesthesiology"
+    },
+    {
+        "service_name": "Regional Anesthesia",
+        "service_description": "Anesthetic techniques that target specific regions of the body, such as nerve blocks or epidurals, to provide pain relief during and after surgery.",
+        "service_department": "Anesthesiology"
+    },
+    {
+        "service_name": "Intraoperative Monitoring",
+        "service_description": "Continuous monitoring of vital signs, including heart rate, blood pressure, and oxygen levels, during surgery to ensure the patient's well-being.",
+        "service_department": "Anesthesiology"
+    },
+    {
+        "service_name": "Postoperative Pain Management",
+        "service_description": "Tailored pain management plans to address postoperative pain and enhance the recovery process for patients after surgery.",
+        "service_department": "Anesthesiology"
+    },{
+        "service_name": "Obstetric Anesthesia",
+        "service_description": "Specialized anesthesia care for pregnant women during labor and delivery, ensuring pain relief and maternal well-being.",
+        "service_department": "Anesthesiology"
+    },
+    {
+        "service_name": "Neuroanesthesia",
+        "service_description": "Anesthetic management for neurosurgical procedures, addressing the unique challenges associated with surgeries involving the brain and spinal cord.",
+        "service_department": "Anesthesiology"
+    },
+    {
+        "service_name": "Regional Anesthesia Techniques",
+        "service_description": "Advanced techniques, such as epidurals and nerve blocks, for targeted pain management and anesthesia during surgeries or medical procedures.",
+        "service_department": "Anesthesiology"
+    },
+    {
+        "service_name": "Transplant Anesthesia",
+        "service_description": "Anesthetic care for patients undergoing organ transplantation, coordinating with transplant teams to ensure optimal perioperative management.",
+        "service_department": "Anesthesiology"
+    },
+    {
+        "service_name": "Pain Management Clinic",
+        "service_description": "Multidisciplinary approach to chronic pain management, involving medication, interventional procedures, and rehabilitative strategies.",
+        "service_department": "Anesthesiology"
+    }
+]

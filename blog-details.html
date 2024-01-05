@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/blog-css.css">
+    
+</head>
+<body>
+
+  <div id="headerId"></div>
+  <div class="blog-single gray-bg">
+    <div class="container">
+        <div class="row d-flex justify-content-center align-items-center" id="blog-details-container">
+            
+        </div>
+    </div>
+</div>
+  <section id="footerId"></section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>   
+
+<script type="module">
+  import Header from '/assets/components/Header.js';
+
+  const container = document.getElementById('headerId');
+
+  container.innerHTML = Header();
+  
+</script>
+
+<script type="module">
+  import Footer from '/assets/components/Footer.js';
+
+  const container = document.getElementById('footerId');
+
+  container.innerHTML = Footer();
+</script>
+
+<script type="module">
+    import BlogDetails from '/assets/components/BlogDetails.js'
+    import {queryString} from '/assets/js/helpers.js'
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        const query_string = queryString(window.location.href)
+        console.log(query_string)
+
+        const urlParams = new URLSearchParams(query_string);
+        const container = document.getElementById('blog-details-container')
+        let id = urlParams.get('id');
+
+        if(!id){
+            window.location.href = 'http://127.0.0.1:5501/'
+            return;
+        }
+        console.log(id)
+
+        fetch(`/apis/blogs.json?id=${id}`)
+        .then(res => res.json())
+        .then(data => {
+            const blogPost = data.find(post => post.id === id);
+
+            if (!blogPost) {
+                console.error(`Blog post with id ${id} not found.`);
+                return;
+            }
+
+            console.log("Data received:", blogPost);
+
+            container.innerHTML = BlogDetails(blogPost);
+        })
+        .catch(error => console.error("Error fetching blog details:", error));
+    })
+
+    
+</script>
+  
+</body>
+</html>

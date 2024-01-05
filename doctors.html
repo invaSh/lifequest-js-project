@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div id="headerId"></div>
+
+    <section class="container mt-5">
+        <h1 class="text-center">Our Doctors</h1>
+        <div class="container d-flex justify-content-center align-items-center">
+            <a href="" id="left" class="mx-3 fs-3"><i class="bi bi-arrow-left-circle-fill"></i></i></a>
+            <span class="fs-3" id="page"></span>
+            <a href="" id="right" class="mx-3 fs-3"><i class="bi bi-arrow-right-circle-fill"></i></i></a>
+        </div>
+        <div class="container-fluid">
+            <div class="row" id="doctors"></div>
+        </div>
+    </section>
+    
+    
+    <section id="footerId"></section>
+
+<script type="module">
+    import Header from '/assets/components/Header.js';
+    
+    const container = document.getElementById('headerId');
+    
+    container.innerHTML = Header();
+      
+</script>
+<script type="module">
+    import Footer from '/assets/components/Footer.js';
+    
+    const container = document.getElementById('footerId');
+    
+    container.innerHTML = Footer();
+      
+</script>
+
+<script type="module">
+    import Doctor from '/assets/components/Doctor.js';
+    import fetchData from '/assets/js/helpers.js';
+
+    const itemsPerPage = 12;
+    let currentPage = 1;
+    let doctorsData = [];
+
+    async function fetchDataOnce(apiURL) {
+        try {
+            doctorsData = await fetchData(apiURL);
+            console.log("DOCTORS DATA:", doctorsData);
+
+            updatePage(currentPage);
+        } catch (error) {
+            console.error("Could not retrieve data", error);
+        }
+    }
+
+    function updatePage(page) {
+        const startIndex = (page - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+
+        const doctorsOnPage = doctorsData.slice(startIndex, endIndex);
+
+        let docs = '';
+
+        for (let i = 0; i < doctorsOnPage.length; i++) {
+            docs += Doctor(doctorsOnPage[i].img_url, doctorsOnPage[i].name, doctorsOnPage[i].department);
+        }
+
+        document.querySelector('#doctors').innerHTML = docs;
+        document.querySelector('#page').innerText = `Page ${currentPage}`;
+    }
+
+    // Initial fetch
+    fetchDataOnce('/apis/doctors.json');
+
+    const previous = document.getElementById('left');
+    const next = document.getElementById('right');
+
+    previous.addEventListener('click', (event) => {
+        event.preventDefault();
+        if (currentPage > 1) {
+            currentPage--;
+            updatePage(currentPage);
+        }
+    });
+
+    next.addEventListener('click', (event) => {
+        event.preventDefault();
+        const totalDoctors = doctorsData.length;
+        const totalPages = Math.ceil(totalDoctors / itemsPerPage);
+
+        if (currentPage < totalPages) {
+            currentPage++;
+            updatePage(currentPage);
+        }
+    });
+
+</script>
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+  <div id="headerId"></div>
+  <section id="blogs" class="container mb-3">
+    <h2 class="title text-center my-5">All Blogs</h2>
+    <div class="row" id="blogs-container"></div>
+    
+  </section>
+  <section id="footerId"></section>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>   
+
+<script type="module">
+  import Header from '/assets/components/Header.js';
+
+  const container = document.getElementById('headerId');
+
+  container.innerHTML = Header();
+  
+</script>
+
+<script type="module">
+  import Footer from '/assets/components/Footer.js';
+
+  const container = document.getElementById('footerId');
+
+  container.innerHTML = Footer();
+  
+</script>
+<script type="module">
+  import BlogPost from '/assets/components/BlogPost.js'
+  import fetchData from '/assets/js/helpers.js'
+
+  awaitFetchData('/apis/blogs.json');
+
+  async function awaitFetchData(apiURL){
+    try{
+      
+      const data = await fetchData(apiURL);
+
+      console.log("BLOGS DATA:", data)
+
+      let blogs=''
+
+      for (let i =0; i<data.length; i++){
+        blogs += BlogPost(data[i].image_url, data[i].title, data[i].short_description, data[i].id)
+      }
+
+      document.querySelector('#blogs-container').innerHTML = blogs;
+
+    
+
+    }catch(error){
+      console.error("Couldnt retrieve data", error)
+    }
+  }
+</script>
+
+  
+</body>
+</html>
